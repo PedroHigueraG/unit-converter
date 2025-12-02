@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Header from "../components/header.astro";
+import Card from "../components/card.astro";
 ---
 
 <html lang="en">
@@ -13,15 +14,14 @@ import Header from "../components/header.astro";
 	</head>
 	<body>
 		<Header></Header>
-		<main>
-			<h1>Simple Unit Conversions</h1>
-			<p>Select a category below to start converting units instantly.</p>
+		<main class="flex flex-col items-center justify-center mt-20">
+			<div class="">
+				<h1 class="text-5xl font-bold text-gray-800 my-5">Simple Unit Conversions</h1>
+				<p class="text-lg text-gray-500 font-semibold my-5">Select a category below to start converting units instantly.</p>
+			</div>
+
 			<div>
-				<div>
-					<img src="" alt="">
-					<a href="">Length Converter</a>
-					<p>Convert between meters, feet, inches, miles and more.</p>
-				</div>
+				<Card imgPath="https://www.svgrepo.com/show/298568/ruler.svg" title="Length Converter" description="Convert between meters, feet, inches, miles and more."/>
 			</div>
 		</main>
 	</body>

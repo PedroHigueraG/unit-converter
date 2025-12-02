@@ -1,0 +1,14 @@
+---
+interface Props {
+    imgPath: string,
+    title: string,
+    description: string
+}
+
+const { imgPath, title, description } = Astro.props;
+---
+<article class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 w-80 my-5">
+    <img src={imgPath} alt="" width="50px" />
+    <h2 class="text-xl font-bold text-gray-700">{title}</h2>
+    <p class="text-gray-500 font-semibold">{description}</p>
+</article>
