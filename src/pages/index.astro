@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/header.astro";
 import Card from "../components/card.astro";
+import Footer from "../components/footer.astro";
 ---
 
 <html lang="en">
@@ -12,17 +13,20 @@ import Card from "../components/card.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Home</title>
 	</head>
-	<body>
+	<body class="flex flex-col h-screen justify-between">
 		<Header></Header>
-		<main class="flex flex-col items-center justify-center mt-20">
-			<div class="">
+		<main class="flex flex-col items-center justify-evenly">
+			<div class="text-center mb-10">
 				<h1 class="text-5xl font-bold text-gray-800 my-5">Simple Unit Conversions</h1>
 				<p class="text-lg text-gray-500 font-semibold my-5">Select a category below to start converting units instantly.</p>
 			</div>
 
-			<div>
-				<Card imgPath="https://www.svgrepo.com/show/298568/ruler.svg" title="Length Converter" description="Convert between meters, feet, inches, miles and more."/>
+			<div class="flex gap-6">
+				<a href="/length"><Card imgPath="https://www.svgrepo.com/show/298568/ruler.svg" title="Length Converter" description="Convert between meters, feet, inches, miles and more."/></a>
+				<a href="/weight"><Card imgPath="https://www.svgrepo.com/show/497667/weight.svg" title="Weight Converter" description="Convert between kilograms, pounds, ounces, grams and more."/></a>
+				<a href="/temperature"><Card imgPath="https://www.svgrepo.com/show/527582/temperature.svg" title="Temperature Converter" description="Convert between Celsius, Fahrenheit and Kelvin."/></a>
 			</div>
 		</main>
+		<Footer></Footer>
 	</body>
 </html>
